@@ -1,4 +1,4 @@
-# scenario : liberty_starter_kit
+# scenario : starter_kit
 
 This scenario install Openstack Liberty on a single node with the following components :
 * Keystone

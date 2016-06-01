@@ -37,7 +37,7 @@ def xp; @xp; end
 
 # Defaults configuration
 #
-XP5K::Config[:scenario]       ||= 'liberty_starter_kit'
+XP5K::Config[:scenario]       ||= 'starter_kit'
 XP5K::Config[:walltime]       ||= '1:00:00'
 XP5K::Config[:user]           ||= ENV['USER']
 XP5K::Config[:computes]       ||= 1

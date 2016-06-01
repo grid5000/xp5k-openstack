@@ -11,6 +11,10 @@ class scenario::openstack::nova (
       password => 'nova',
   }
 
+  class { '::nova::db::mysql_api':
+    password => 'nova',
+  }
+
   class {
     '::nova::keystone::auth':
       password => $admin_password,
@@ -45,6 +49,7 @@ class scenario::openstack::nova (
   class {
     '::nova':
       database_connection => 'mysql://nova:nova@127.0.0.1/nova?charset=utf8',
+      api_database_connection => 'mysql://nova_api:nova@127.0.0.1/nova_api?charset=utf8',
       rabbit_host         => '127.0.0.1',
       rabbit_userid       => 'nova',
       rabbit_password     => 'an_even_bigger_secret',
@@ -82,7 +87,6 @@ class scenario::openstack::nova (
   class { '::nova::vncproxy': }
   class { '::nova::network::neutron':
     neutron_admin_password => $admin_password,
-    neutron_admin_auth_url => 'http://127.0.0.1:35357/v2.0',
   }
 
 }

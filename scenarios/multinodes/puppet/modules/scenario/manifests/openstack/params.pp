@@ -5,13 +5,19 @@
 class scenario::openstack::params {
 
   $admin_password = 'admin'
-  $primary_interface = 'eth0'
+
+  $controller_public_address = hiera("scenario::openstack::controller_public_address")
+  $storage_public_address = hiera("scenario::openstack::storage_public_address")
+
+  $public_network = hiera("scenario::openstack::public_network")
+  $data_network = hiera("scenario::openstack::data_network")
+
 
   case $::osfamily {
     'Debian': {
       include ::apt
       class { '::openstack_extras::repo::debian::ubuntu':
-        release         => 'liberty',
+        release         => 'mitaka',
         repo            => 'proposed',
         package_require => true,
       }

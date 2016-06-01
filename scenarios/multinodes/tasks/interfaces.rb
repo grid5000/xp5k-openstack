@@ -5,7 +5,7 @@
 # ... allways sure that the second interface is eth1 (on paranoia it's eth2) 
 # ... TODO this cachinf logic should probably go directly to xp5k
 
-INTERFACES_CACHE="scenarios/liberty_multinodes/.interfaces.yml"
+INTERFACES_CACHE="scenarios/multinodes/.interfaces.yml"
 
 def get_nodes
   nodes = []

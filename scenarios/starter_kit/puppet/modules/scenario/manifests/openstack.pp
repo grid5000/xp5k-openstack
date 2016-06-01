@@ -38,6 +38,8 @@ class scenario::openstack (
       path     => '/root/openstack-openrc.sh';
   }
 
+  # installed to get gethostip cmd 
+  # see in task/scenario.rb
   package {
     'syslinux':
       ensure => installed;

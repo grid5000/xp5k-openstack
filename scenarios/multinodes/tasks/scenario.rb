@@ -5,7 +5,7 @@
 # Override OAR resources (tasks/jobs.rb)
 # We uses 2 nodes (1 puppetserver and 1 controller) and a subnet for floating public IPs
 #
-XP5K::Config[:jobname]    ||= '[openstack]liberty_multinode'
+XP5K::Config[:jobname]    ||= '[openstack]mitaka_multinodes'
 XP5K::Config[:site]       ||= 'rennes'
 XP5K::Config[:walltime]   ||= '1:00:00'
 XP5K::Config[:cluster]    ||= ''
@@ -51,7 +51,7 @@ resources = [] <<
   size: XP5K::Config[:computes].to_i
 })
 
-G5K_NETWORKS = YAML.load_file("scenarios/liberty_multinodes/g5k_networks.yml")
+G5K_NETWORKS = YAML.load_file("scenarios/multinodes/g5k_networks.yml")
 
 # Override role 'all' (tasks/roles.rb)
 #
@@ -92,7 +92,6 @@ namespace :scenario do
         cmd += " --trace" if ENV['trace']
         cmd
     end
-    
     on roles('network', 'storage', 'compute') do
         cmd = "/opt/puppetlabs/bin/puppet agent -t --server #{puppetserver}"
         cmd += " --debug" if ENV['debug']

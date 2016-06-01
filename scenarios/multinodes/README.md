@@ -1,4 +1,4 @@
-# scenario : liberty_multinodes
+# scenario : multinodes
 
 This scenario install Openstack Liberty on multiple nodes using the following topology.
 

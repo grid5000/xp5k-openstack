@@ -9,8 +9,8 @@ xp.conf
 scenarios/*/hiera/generated
 scenarios/*/puppet/modules-openstack
 scenarios/*
-!scenarios/liberty_starter_kit
-!scenarios/liberty_multinodes
+!scenarios/starter_kit
+!scenarios/multinodes
 
 dashboard_tunnels.sh
 

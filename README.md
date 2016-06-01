@@ -137,7 +137,7 @@ The `run` task is a flow of tasks that prepare the experiment and launch at the 
 
 ### Scenarios
 
-Scenarios are placed in `./scenarios` directory. The default scenario is `liberty_starter_kit`. To use another scenario, update the `xp.conf` file with :
+Scenarios are placed in `./scenarios` directory. The default scenario is `starter_kit`. To use another scenario, update the `xp.conf` file with :
 
 ```
 scenario 'scenario_name'

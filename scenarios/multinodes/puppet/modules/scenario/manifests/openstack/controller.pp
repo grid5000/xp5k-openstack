@@ -35,8 +35,9 @@ class scenario::openstack::controller(
   class { '::neutron::db::mysql':
     password => 'neutron',
     # TODO be more restrictive on the grants
-    allowed_hosts => ['localhost', '127.0.0.1', '%']
+    allowed_hosts => ['localhost', '127.0.0.1', '%'],
   }
+
   class { '::neutron::keystone::auth':
     password => $admin_password,
     public_url   => "http://${controller_public_address}:9696",
@@ -53,8 +54,8 @@ class scenario::openstack::controller(
   class { '::neutron::server':
     database_connection => "mysql://neutron:neutron@${controller_public_address}/neutron?charset=utf8",
     auth_password       => $admin_password,
-    identity_uri        => "http://${controller_public_address}:35357/",
-    auth_uri            => "http://${controller_public_address}:5000",
+    auth_uri            => "http://${controler_public_address}:5000",
+    auth_url            => "http://${controler_public_address}:35357",
     sync_db             => true,
   }
 
@@ -73,6 +74,12 @@ class scenario::openstack::controller(
     '::nova::db::mysql':
       password => 'nova',
       # TODO be more restrictive on the grants
+      allowed_hosts => ['localhost', '127.0.0.1', '%']
+  }
+
+  class {
+    '::nova::db::mysql_api':
+      password => 'nova',
       allowed_hosts => ['localhost', '127.0.0.1', '%']
   }
 
