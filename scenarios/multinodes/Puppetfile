@@ -2,101 +2,93 @@
 
 mod 'aodh',
   :git => 'https://git.openstack.org/openstack/puppet-aodh',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'ceilometer',
   :git => 'https://git.openstack.org/openstack/puppet-ceilometer',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'cinder',
   :git => 'https://git.openstack.org/openstack/puppet-cinder',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'designate',
   :git => 'https://git.openstack.org/openstack/puppet-designate',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'glance',
   :git => 'https://git.openstack.org/openstack/puppet-glance',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'gnocchi',
   :git => 'https://git.openstack.org/openstack/puppet-gnocchi',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'heat',
   :git => 'https://git.openstack.org/openstack/puppet-heat',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'horizon',
   :git => 'https://git.openstack.org/openstack/puppet-horizon',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'ironic',
   :git => 'https://git.openstack.org/openstack/puppet-ironic',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'keystone',
   :git => 'https://git.openstack.org/openstack/puppet-keystone',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'manila',
   :git => 'https://git.openstack.org/openstack/puppet-manila',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
+
+mod 'mistral',
+  :git => 'https://git.openstack.org/openstack/puppet-mistral',
+  :ref => 'stable/mitaka'
 
 mod 'murano',
   :git => 'https://git.openstack.org/openstack/puppet-murano',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'neutron',
   :git => 'https://git.openstack.org/openstack/puppet-neutron',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'nova',
   :git => 'https://git.openstack.org/openstack/puppet-nova',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
+
+mod 'openstack_integration',
+  :git => 'https://git.openstack.org/openstack/puppet-openstack-integration',
+  :ref => 'stable/mitaka'
 
 mod 'openstack_extras',
   :git => 'https://git.openstack.org/openstack/puppet-openstack_extras',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'openstacklib',
   :git => 'https://git.openstack.org/openstack/puppet-openstacklib',
-  :ref => '7.0.0'
-
-mod 'sahara',
-  :git => 'https://git.openstack.org/openstack/puppet-sahara',
-  :ref => '7.0.0'
-
-mod 'swift',
-  :git => 'https://git.openstack.org/openstack/puppet-swift',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'tempest',
   :git => 'https://git.openstack.org/openstack/puppet-tempest',
-  :ref => '7.0.0'
-
-mod 'trove',
-  :git => 'https://git.openstack.org/openstack/puppet-trove',
-  :ref => '7.0.0'
-
-mod 'tuskar',
-  :git => 'https://git.openstack.org/openstack/puppet-tuskar',
-  :ref => '7.0.0'
+  :ref => 'stable/mitaka'
 
 mod 'vswitch',
   :git => 'https://git.openstack.org/openstack/puppet-vswitch',
-  :ref => '3.0.0'
+  :ref => 'stable/mitaka'
 
 # External modules
 
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
-  :branch => '1.4.x'
+  :branch => '1.8.x'
 
 mod 'apt',
   :git => 'https://github.com/puppetlabs/puppetlabs-apt',
-  :branch => '2.1.x'
+  :branch => '2.2.x'
 
 mod 'concat',
   :git => 'https://github.com/puppetlabs/puppetlabs-concat',
@@ -108,11 +100,11 @@ mod 'corosync',
 
 mod 'dns',
   :git => 'https://github.com/theforeman/puppet-dns',
-  :tag => '3.0.0'
+  :tag => '3.1.0'
 
 mod 'firewall',
   :git => 'https://github.com/puppetlabs/puppetlabs-firewall',
-  :branch => '1.6.x'
+  :branch => '1.7.x'
 
 mod 'inifile',
   :git => 'https://github.com/puppetlabs/puppetlabs-inifile',
@@ -124,7 +116,7 @@ mod 'memcached',
 
 mod 'mongodb',
   :git => 'https://github.com/puppetlabs/puppetlabs-mongodb',
-  :branch => '0.11.0'
+  :branch => '0.12.0'
 
 mod 'mysql',
   :git => 'https://github.com/puppetlabs/puppetlabs-mysql',
@@ -132,7 +124,7 @@ mod 'mysql',
 
 mod 'postgresql',
   :git => 'https://github.com/puppetlabs/puppetlabs-postgresql',
-  :branch => '4.4.x'
+  :ref => '4.7.1'
 
 mod 'powerdns',
   :git => 'https://github.com/antonlindstrom/puppet-powerdns',
@@ -140,7 +132,7 @@ mod 'powerdns',
 
 mod 'python',
   :git => 'https://github.com/stankevich/puppet-python',
-  :tag => '1.9.4'
+  :tag => '1.10.0'
 
 mod 'qpid',
   :git => 'https://github.com/dprince/puppet-qpid',
@@ -160,7 +152,7 @@ mod 'staging',
 
 mod 'stdlib',
   :git => 'https://github.com/puppetlabs/puppetlabs-stdlib',
-  :branch => '4.6.x'
+  :branch => '4.9.x'
 
 mod 'sysctl',
   :git => 'https://github.com/duritong/puppet-sysctl',

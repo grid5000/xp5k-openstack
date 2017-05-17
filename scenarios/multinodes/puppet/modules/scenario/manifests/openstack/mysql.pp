@@ -8,7 +8,8 @@ class scenario::openstack::mysql () {
     override_options   => {
       'mysqld'         => {
         # TODO be more restrictive on the bind address ?
-        'bind_address' => '0.0.0.0'
+        'bind_address' => '0.0.0.0',
+        'max_connections' => 1024
       },
       # restart mysql (because we change the bind address)
     },

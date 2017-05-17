@@ -5,7 +5,7 @@
 # Override OAR resources (tasks/jobs.rb)
 # We uses 2 nodes (1 puppetserver and 1 controller) and a subnet for floating public IPs
 #
-XP5K::Config[:jobname]    ||= '[openstack]liberty_multinode'
+XP5K::Config[:jobname]    ||= '[openstack]mitaka_multinodes'
 XP5K::Config[:site]       ||= 'rennes'
 XP5K::Config[:walltime]   ||= '1:00:00'
 XP5K::Config[:cluster]    ||= ''
@@ -91,7 +91,6 @@ namespace :scenario do
         cmd += " --trace" if ENV['trace']
         cmd
     end
-    
     on roles('network', 'storage', 'compute') do
         cmd = "/opt/puppetlabs/bin/puppet agent -t --server #{puppetserver}"
         cmd += " --debug" if ENV['debug']
@@ -109,7 +108,6 @@ namespace :scenario do
       'scenario:os:rules',
       'scenario:os:public_bridge',
       'scenario:os:network',
-      'scenario:os:horizon',
       'scenario:os:flavors',
       'scenario:os:images'
     ]
@@ -181,13 +179,6 @@ namespace :scenario do
         cmd << %{neutron router-gateway-set main_router public}
         cmd << %{neutron router-interface-add main_router private-subnet}
         cmd
-      end
-    end
-
-    desc 'Init horizon theme'
-    task :horizon do
-      on(roles('controller'), user: 'root') do
-        %{/usr/share/openstack-dashboard/manage.py collectstatic --noinput && /usr/share/openstack-dashboard/manage.py compress --force}
       end
     end
 

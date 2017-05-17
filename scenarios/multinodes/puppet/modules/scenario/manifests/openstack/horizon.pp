@@ -17,6 +17,7 @@ class scenario::openstack::horizon {
     #swift              => false,
     django_debug       => 'True',
     api_result_limit   => '2000',
+    allowed_hosts      => '*',
     vhost_extra_params =>  { 'port' => '8080' };
   }
 
