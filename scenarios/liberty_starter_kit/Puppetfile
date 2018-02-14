@@ -92,7 +92,7 @@ mod 'vswitch',
 
 mod 'apache',
   :git => 'https://github.com/puppetlabs/puppetlabs-apache',
-  :branch => '1.4.x'
+  :branch => 'release'
 
 mod 'apt',
   :git => 'https://github.com/puppetlabs/puppetlabs-apt',
